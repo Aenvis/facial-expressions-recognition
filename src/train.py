@@ -44,10 +44,9 @@ model.compile(loss='categorical_crossentropy', optimizer=tf.keras.optimizers.Ada
 model_info = model.fit(
     train_ds,
     steps_per_epoch=28709 // 64,
-    epochs=50,
+    epochs=80,
     validation_data=test_ds,
-    validation_steps=7178 // 64
+    validation_steps= 7178 // 64
 )
 
-model.save_weights('../data/model.h5')
-model.save_weights('../data/model1.h5')
+model.save('../data/model1.h5') 
