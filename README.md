@@ -57,11 +57,17 @@ Jako <b>dane wejściowe</b> potrzebne są zdjęcia twarzy. Zbiory danych w posta
 
 <b> Wyjściem algorytmu </b> dla każdego zdjęcia jest lista tylu wartości w przedziale < 0.0 ; 1.0 >, ilu klas danych wejściowych. Każda kolejna wartość odpowiada predykcji na ile algorytm ocenia, że zdjęcie należy do klasy o tym indeksie. Przykład:
 Jeśli algorytm zwróci [0.013807331, 0.003256767, 0.9232555, 0.02688416, 0.028897915, 0.0038983417], oznacza to, że w następujący sposób klasyfikuje zdjęcie na wejściu:
+
 <b>0.013807331 * 100%</b>, że jest to klasa <b>angry</b>
+
 <b>0.003256767* 100%</b>, że jest to klasa <b>fearful</b>
+
 <b>0.9232555* 100%</b>, że jest to klasa <b>happy</b>
+
 <b>0.02688416* 100%</b>, że jest to klasa <b>neutral</b>
+
 <b>0.028897915* 100%</b>, że jest to klasa <b>sad</b>
+
 <b>0.0038983417* 100%</b>, że jest to klasa <b>surprised</b> 
 
 Pominięto jedną klasę ze względu na implementację.
