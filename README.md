@@ -32,10 +32,10 @@ Wybrany przeze mnie problem polega na klasyfikacji wyrazów twarzy wykorzystują
 		np. przemysł, medycyna, lotnictwo.
 ## State of art
 | **Wybrane typy uczenia maszynowego** | **opis działania** | **ilość danych wejściowych (poziomy 1-3)** | **Cechy charakterystyczne** |
-|---|---|---|---|
-| CNN - convolutional neural networks | Warstwy konwolucyjne ekstraktują cechy z obrazy,<br>a następnie przetwarzają je na warstwach<br>pełniących rolę klasyfikatora | 2 | Skomplikowane, łatwiejszy proces uczenia<br>niż DNN, bardzo duża dokładność |
-| DNN - deep neural networks | Bardzo duża liczba warstw ukrytych, które<br>przetwarzają dane i w ten sposób są w stanie<br>trenować model | 3 | Bardzo skomplikowane, trudny proces uczenia,<br>duża dokładność |
-| Uczenie przez ekstrakcję cech | Z danych wejściowych wyodrębniane<br> są kluczowe cechy,<br> które są następnie wykorzystane<br> do uczenia modelu  | 1 | Łatwiejsze w porównaniu do innych typów,<br>mniejsza dokładność uczenia |
+|:---:|:---:|:---:|:---:|
+| CNN - convolutional neural networks | Warstwy konwolucyjne ekstraktują cechy z obrazy,<br>a następnie przetwarzają je na warstwach<br>pełniących rolę klasyfikatora | 2 | Skomplikowane, łatwiejszy proces uczenia<br>niż DNN, bardzo duża dokładność uczenia |
+| DNN - deep neural networks | Bardzo duża liczba warstw ukrytych, które<br>przetwarzają dane i w ten sposób są w stanie<br>trenować model | 3 | Bardzo skomplikowane, trudny proces uczenia,<br>duża dokładność uczenia |
+| Uczenie przez ekstrakcję cech | Z danych wejściowych wyodrębniane<br> są kluczowe cechy,<br> które są następnie wykorzystane<br> do uczenia modelu  | 1 | Łatwiejsze w porównaniu do innych typów,<br>o wiele mniejsza dokładność i poziom uczenia |
 
 ## Opis wybranej koncepcji
 
