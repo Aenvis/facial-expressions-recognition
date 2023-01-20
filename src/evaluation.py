@@ -58,7 +58,7 @@ test_label_pred = [np.argmax(pred) for pred in test_predictions]
 cm_test = tf.math.confusion_matrix(test_label, test_label_pred)
 
 def PlotConfusionMatrix(set: Set) -> None:
-    plt.imshow(cm_test if set is Set.TEST else cm_train, cmap='binary')
+    plt.imshow(cm_test if set is Set.TEST else cm_train)
     plt.colorbar()
     plt.xlabel('Predicted label')
     plt.ylabel('True label')
