@@ -126,5 +126,9 @@ Loss for the test data set: 1.133596420288086
 Accuracy for the train data set: 0.96692955493927
 Accuracy for the test data set: 0.6197820901870728
 ```
+Jak można odczytać z powyższych wskaźników, wskaźnik dokładności dla danych treningowych wynosi ~0.97, gdzie dla danych testowych ~0.62.
 
+Model poddałem także ewaluacji poprzez macierz pomyłek, które wyglądają następująco:
+
+- ### Zbiór danych treningowych
 
