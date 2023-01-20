@@ -1,8 +1,8 @@
 import tensorflow as tf
 import pandas as pd
 
-train_path = '../data/train'
-test_path = '../data/test'
+train_path = 'data/train'
+test_path = 'data/test'
 
 train_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1.0/255)
 # load train dataset
@@ -37,16 +37,20 @@ model = tf.keras.Sequential([
     tf.keras.layers.Flatten(),
     tf.keras.layers.Dense(1024, activation='relu'),
     tf.keras.layers.Dropout(0.5),
-    tf.keras.layers.Dense(7, activation='softmax')
+    tf.keras.layers.Dense(6, activation='softmax')
 ])
 
-model.compile(loss='categorical_crossentropy', optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001, weight_decay=1e-6), metrics=['accuracy'])
+model.compile(loss='categorical_crossentropy', optimizer=tf.keras.optimizers.Adam(), metrics=['accuracy'])
+
+reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_accuracy', factor=0.2,
+                              patience=8, min_lr=0.00001)
+early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_accuracy', patience=5)
 model_info = model.fit(
     train_ds,
-    steps_per_epoch=28709 // 64,
-    epochs=80,
+    epochs=50,
+    callbacks=[reduce_lr, early_stop],
     validation_data=test_ds,
-    validation_steps= 7178 // 64
 )
 
-model.save('../data/model1.h5') 
+print(model_info.history)
+model.save('data/model1.h5') 
