@@ -130,5 +130,11 @@ Jak można odczytać z powyższych wskaźników, wskaźnik dokładności dla dan
 
 Model poddałem także ewaluacji poprzez macierz pomyłek, które wyglądają następująco:
 
-- ### Zbiór danych treningowych
+- zbiór danych treningowych
+![macierz1](https://user-images.githubusercontent.com/76266906/213818756-9fe8beab-fbb5-4b70-acc1-7446ec4629b8.png)
 
+- zbiór danych testowych
+![macierz2](https://user-images.githubusercontent.com/76266906/213818765-e45614b7-4516-41f1-a7b8-e04671fc1860.png)
+
+
+Widać zdecydowaną dominację klasy o indeksie 2 - fearful, zarówno w danych treningowych jak i testowych.
