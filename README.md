@@ -112,9 +112,19 @@ tf.keras.layers.Dense(6, activation='softmax')
 ])
 ```
 
-Potem model jest komplikowany i trenowany. Model w moim projekcie osiągnął bardzo złe wyniku, m.in. mocny overfitting. Mogło być to spowodowane zdjęciami wejściowymi słabej jakości, oraz nieodpowiednio dobranymi warstwami i parametrami sieci neuronowej. Aby minimalnie poprawić jakość modelu zrezygnowałem z klasy 'disgusted', która zawierała znacznie mniej zdjęć, niż inne klasy. Nieznacznie poprawiło to wskaźniki val i accuracy, których krzywe uczenia przedstawiłem poniżej (dla zbiorów danych treningowego i testowego):
+Potem model jest komplikowany i trenowany. Model w moim projekcie osiągnął bardzo złe wyniku, m.in. mocny overfitting. Mogło być to spowodowane zdjęciami wejściowymi słabej jakości, oraz nieodpowiednio dobranymi warstwami i parametrami sieci neuronowej. Aby minimalnie poprawić jakość modelu zrezygnowałem z klasy 'disgusted', która zawierała znacznie mniej zdjęć, niż inne klasy. Nieznacznie poprawiło to wskaźniki loss i accuracy, których krzywe uczenia przedstawiłem poniżej (dla zbiorów danych treningowego i testowego):
 
 ![Figure_1](https://user-images.githubusercontent.com/76266906/213817023-a8522f20-70cd-4faf-968d-5c7350de49cf.png)
 ![Figure_2](https://user-images.githubusercontent.com/76266906/213817033-297a4ba1-d712-48b5-ba43-43cf0078da59.png)
+
+Od pewnego wczesnego momentu krzywa dla danych testowych utrzymuje się na stałym poziomie.
+
+Wskaźniki liczbowe loss i accuracy tak wytrenowanego modelu:
+
+```Loss for the train data set: 0.2262008637189865
+Loss for the test data set: 1.133596420288086
+Accuracy for the train data set: 0.96692955493927
+Accuracy for the test data set: 0.6197820901870728
+```
 
 
