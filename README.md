@@ -1,4 +1,5 @@
 
+
   <h3 align="center">Klasyfikacja wyrazów twarzy</h3>
 
   <p align="center">
@@ -17,7 +18,7 @@
 - [Opis problemu](#opis-problemu)
 - [State of art](#state-of-art)
 - [Opis wybranej koncepcji](#opis-wybranej-koncepcji)
-- [Prezentacja działania](#prezentacja-działania)
+- [Moja implementacja](#moja-implementacja)
 
 
 ## Opis problemu
@@ -76,5 +77,44 @@ Aby zastosować architekturę CNN, potrzeba bardzo dużych zasobów obliczeniowy
 ## Moja implementacja
 W mojej implementacji korzystałem z biblioteki TensorFlow.
 
+### Etapy projektu
+- #### Uczenie modelu
+	 Załadowano zbiory danych treningowy oraz testowy. Dane <b> nie zostały </b> poddane preprocessingowi, co mogło wpłynąć na bardzo słabe wyniku modelu. Zrezygnowałem z preprocessingu, ze względu na to, że dane były już wcześniej przygotowane pod proces uczenia. Następnie, w oparciu o dostępne materiały w internecie, zaimplementowałem następującą sieć neuronową:
+```python
+model = tf.keras.Sequential([
+
+tf.keras.layers.Conv2D(32, kernel_size=(3,3), activation='relu', input_shape=(48, 48, 1)),
+
+tf.keras.layers.Conv2D(64, kernel_size=(3,3), activation='relu'),
+
+tf.keras.layers.MaxPooling2D(pool_size=(2,2)),
+
+tf.keras.layers.Dropout(0.25),
+
+tf.keras.layers.Conv2D(128, kernel_size=(3,3), activation='relu'),
+
+tf.keras.layers.MaxPooling2D(pool_size=(2,2)),
+
+tf.keras.layers.Conv2D(128, kernel_size=(3,3), activation='relu'),
+
+tf.keras.layers.MaxPooling2D(pool_size=(2,2)),
+
+tf.keras.layers.Dropout(0.25),
+
+tf.keras.layers.Flatten(),
+
+tf.keras.layers.Dense(1024, activation='relu'),
+
+tf.keras.layers.Dropout(0.5),
+
+tf.keras.layers.Dense(6, activation='softmax')
+
+])
+```
+
+Potem model jest komplikowany i trenowany. Model w moim projekcie osiągnął bardzo złe wyniku, m.in. mocny overfitting. Mogło być to spowodowane zdjęciami wejściowymi słabej jakości, oraz nieodpowiednio dobranymi warstwami i parametrami sieci neuronowej. Aby minimalnie poprawić jakość modelu zrezygnowałem z klasy 'disgusted', która zawierała znacznie mniej zdjęć, niż inne klasy. Nieznacznie poprawiło to wskaźniki val i accuracy, których krzywe uczenia przedstawiłem poniżej (dla zbiorów danych treningowego i testowego):
+
+![Figure_1](https://user-images.githubusercontent.com/76266906/213817023-a8522f20-70cd-4faf-968d-5c7350de49cf.png)
+![Figure_2](https://user-images.githubusercontent.com/76266906/213817033-297a4ba1-d712-48b5-ba43-43cf0078da59.png)
 
 
