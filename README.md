@@ -1,42 +1,43 @@
 
 
-  <h3 align="center">Klasyfikacja wyrazów twarzy</h3>
+
+  <h3 align="center">Facial expressions recognition</h3>
 
   <p align="center">
-	  Wojciech Czerwiński 147641 
+	  Wojciech Czerwiński 147641
 	</p>
 	  <p align="center">
    Deep Learning (Convolutional Neural Network)
    </p>
     <p align="center">
-   Projekt na zaliczenie przedmiotu <b>Wprowadzenie do Sztucznej Inteligencji czwartek 11:45</b>
+   <b>course: Intro to Artificial Intelligence @ Poznań University of Technology</b>
 	</p>
 
 
-## Spis treści
+## Table of contents
 
-- [Opis problemu](#opis-problemu)
+- [About the project](#about-the-problem)
 - [State of art](#state-of-art)
-- [Opis wybranej koncepcji](#opis-wybranej-koncepcji)
-- [Moja implementacja](#moja-implementacja)
+- [Description of chosen solution](#description-of-chosen-solution)
+- [Implementation](#implementation)
 
 
-## Opis problemu
+## About the project
 
-Wybrany przeze mnie problem polega na klasyfikacji wyrazów twarzy wykorzystując <b>CNN - konwolucyjną sieć neuronową</b> - jest to rodzaj architektury algorytmów głębokiego uczenia oparty o warstwy splotowe, szczególnie wykorzystywany w przetwarzaniu danych graficznych.  
-- ### Dane wejściowe 
-		Zdjęcia twarzy w rozdzielczości 48x48, wszystkie zdjęcia są w skali szarości. 
-		Zdjęcia przedstawiają twarze wyrażające 7 różnych emocji (klasy w modelu):
+The chosen problem is to classify facial expressions using a <b>CNN - Convolutional Neural Network</b> - a type of deep learning algorithm architecture based on convolutional layers, particularly used in image data processing. 
+- ### Input 
+		Images of faces in 48x48 resolution, all images are in greyscale. 
+		Images show faces expressing 7 different emotions (classes in the model):
 		angry, disgusted, fearful, happy, neutral, sad, surprised
-- ### Zamierzony efekt
-		Celem projektu jest klasyfikacja zdjęć podanych przez użytkownika na podstawie wytrenowanego modelu.
-		Np. podając zdjęcie uśmiechniętej twarzy (może być dowolna rozdzielczość oraz paleta barw)
-		model powinien opisać je klasą 'happy'
-- ### Motywacja
-		Głębokie uczenie z wykorzystaniem sieci neuronowych, a w szczególności CNN dla problemów 
-		związanych z przetwarzaniem obrazów, jest przyszłościową technologią, która w znaczny
-		sposób może poprawić jakość oraz przyspieszyć rozwój w wielu dziedzinach życia codziennego,
-		np. przemysł, medycyna, lotnictwo.
+- ### Desired effect
+		The purpose of the project is to classify the images given by the user based on a trained model.
+		E.g. giving an image of a smiling face (can be any resolution and color palette)
+		the model should describe it with the class 'happy'
+- ### Motivation 
+		Deep learning using neural networks, and in particular CNNs for problems 
+		related to image processing, is a future-oriented technology that can significantly 
+		improve quality and accelerate development in many areas of everyday life,
+		e.g. industry, medicine, aviation.
 ## State of art
 | **Wybrane typy uczenia maszynowego** | **opis działania** | Zalety | Wady |
 |:---:|:---:|:---:|:---:|
@@ -44,7 +45,7 @@ Wybrany przeze mnie problem polega na klasyfikacji wyrazów twarzy wykorzystują
 | DNN - deep neural networks | Bardzo duża liczba warstw ukrytych, które<br>przetwarzają dane i w ten sposób są w stanie<br>trenować model | - skuteczne w rozpoznawaniu obiektów i twarzy a także generowaniu obrazów<br>- Architektura pozwala na uczelnie bardziej złożonych modeli | - Potrzebują bardzo dużą ilość danych<br>-Proces uczenia jest jeszcze dłuższy niż CNN |
 | Uczenie przez ekstrakcję cech | Z danych wejściowych wyodrębniane<br> są kluczowe cechy,<br> które są następnie wykorzystane<br> do uczenia modelu  | - prostota, która pozwala na skupienie się na kluczowych cechach danych<br>- skuteczna, gdy cechy są dobrze opisane | - mniej skuteczna niż CNN i DNN |
 
-## Opis wybranej koncepcji
+## Description of chosen solution
 Jak przedstawiono w poprzednich punktach, <b> konwolucyjne sieci neuronowe </b> to rodzaj sieci neuronowych, które są specjalnie zaprojektowane do przetwarzania obrazów. Działanie CNN polega na przeprowadzeniu konwolucji (czyli operacji splotu) danych wejściowych z filtrem, co pozwala na wykrycie wzorców w obrazie.
 
 Architektura CNN składa się z kilku warstw:
@@ -74,7 +75,7 @@ Jeśli algorytm zwróci [0.013807331, 0.003256767, 0.9232555, 0.02688416, 0.0288
 Pominięto jedną klasę ze względu na implementację.
 
 Aby zastosować architekturę CNN, potrzeba bardzo dużych zasobów obliczeniowych oraz dużej odpowiednio przygotowanych ilości danych, aby model był skuteczny oraz jak jak najbardziej niezawodny. Potrzebny jest także dobrze zaprojektowany model, co jest bardzo trudnym zadaniem i zależy mocno od rozwiązywanego problemu.
-## Moja implementacja
+## Implementation
 W mojej implementacji korzystałem z biblioteki TensorFlow.
 
 ### Etapy projektu
