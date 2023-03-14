@@ -132,9 +132,11 @@ As can be read from the indicators above, the accuracy rate for the training dat
 I also evaluated the model using confusion matrix, which looks like this:
 
 - training data set
+
 ![macierz1](https://user-images.githubusercontent.com/76266906/213818756-9fe8beab-fbb5-4b70-acc1-7446ec4629b8.png)
 
 - test data set
+
 ![macierz2](https://user-images.githubusercontent.com/76266906/213818765-e45614b7-4516-41f1-a7b8-e04671fc1860.png)
 
 
