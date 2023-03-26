@@ -113,7 +113,7 @@ tf.keras.layers.Dense(6, activation='softmax')
 ])
 ```
 
-Then the model is compiled and trained. The model in my project achieved very poor results, including strong overfitting. This may have been due to poor quality input images, and inappropriate layers and neural network parameters. To minimally improve the quality of the model, I dropped the 'disgusted' class, which contained significantly fewer images than the other classes. This slightly improved the loss and accuracy rates, whose learning curves I have shown below (for the training and test datasets):
+Then the model is compiled and trained. The model in my project achieved very poor results, including strong overfitting. This may have been due to poor quality input images, and inappropriate layers and neural network parameters. To minimally improve the quality of the model, I dropped the 'disgusted' class, which contained significantly fewer images than the other classes. This slightly improved the loss and accuracy rates, for which I have shown learning curves below (for the training and test datasets):
 
 ![Figure_1](https://user-images.githubusercontent.com/76266906/213817023-a8522f20-70cd-4faf-968d-5c7350de49cf.png)
 ![Figure_2](https://user-images.githubusercontent.com/76266906/213817033-297a4ba1-d712-48b5-ba43-43cf0078da59.png)
