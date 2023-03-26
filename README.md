@@ -80,7 +80,7 @@ In my implementation, I used the TensorFlow library.
 
 ### Project stages
 - #### Teaching the model
-	 Training and test datasets were loaded. The data <b> was not preprocessed</b> which could have influenced the very poor performance of the model. I resigned from preprocessing, due to the fact that the data had already been prepared for the learning process. I then implemented the following neural network based on available material on the internet:
+	 Training and test datasets were loaded. The data <b> was not preprocessed</b> which could have influenced the very poor performance of the model. I resigned from preprocessing, due to the fact that the data had already been prepared for the learning process. I then implemented the following neural network based on available materials on the internet:
 ```python
 model = tf.keras.Sequential([
 
