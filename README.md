@@ -46,7 +46,7 @@ The chosen problem is to classify facial expressions using a <b>CNN - Convolutio
 | Learning through feature extraction |<br> From the input data, key features are extracted, which are then used to teach the model<br>| - simplicity, which allows a focus on the key features of the data<br>- effective when features are well described | - less effective than CNN and DNN |
 
 ## Description of chosen solution
-As presented in the previous sections, <b> convolutional neural networks </b> that are specifically designed for image processing. The operation of a CNN relies on a convolution of the input data with a filter to detect patterns in the image.
+As presented in the previous sections, <b> convolutional neural networks </b> are specifically designed for image processing. The operation of a CNN relies on a convolution of the input data with a filter to detect patterns in the image.
 
 CNN's architecture consists of several layers:
 1.  Convolution layer: this layer consists of filters that are used to detect patterns in the image. The filters move through the image and perform convolution with the input data to detect patterns in different parts of the image.
@@ -79,7 +79,7 @@ In order to apply the CNN architecture, very large computational resources and l
 In my implementation, I used the TensorFlow library.
 
 ### Project stages
-- #### Learning the model
+- #### Teaching the model
 	 Training and test datasets were loaded. The data <b> was not preprocessed</b> which could have influenced the very poor performance of the model. I resigned from preprocessing, due to the fact that the data had already been prepared for the learning process. I then implemented the following neural network based on available material on the internet:
 ```python
 model = tf.keras.Sequential([
